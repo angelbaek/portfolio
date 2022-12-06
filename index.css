@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top_header{
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: black;
+    color: aliceblue;
+}
+.top_header .header_label{
+    margin-left: 1%;
+    display: inline-block;
+}
+
+.top_header .header_label #header_label_introduce{
+    display: inline-block;
+}
+.top_header .header_label #header_label_project{    
+    /* margin-left: 500px; */
+    display: inline-block;
+}
+
+.top_header .header_title{
+    display: inline-block;
+    margin-left: 40%;    
+}
