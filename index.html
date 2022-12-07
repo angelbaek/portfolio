@@ -12,16 +12,21 @@
 <header>
     <div class="top_header">
         <div class="header_label">
-            <div id="header_label_introduce">introduce</div>
-            <div id="header_label_project">project</div>
+            <div id="header_label_introduce"><a class="common_header_label" href="/index.html">introduce</a></div>
+            <div id="header_label_project"><a class="common_header_label" href="">project</a></div>
         </div>
         <div class="header_title">Baek Seung Ho</div>        
         <div></div>
     </div>
 </header>
 <body>
-    <div class="boddy_contents">
-        HELLO AND WELCOME
+    <div class="body_contents">
+        <div class="main_text">
+            HELLO AND WELCOME
+        </div>        
+        <div class="body_descryption">
+            This site is My portfolio
+        </div>
         <div class="chevron_down">
             <i class="fas fa-chevron-down"></i>
         </div>
@@ -32,4 +37,12 @@
 
     </div>
 </footer>
+<script>
+    setInterval(function() {
+        $('.main_text').css('opacity', '1.0');                        
+    }, 300);
+    setInterval(function() {
+        $('.main_text').css('opacity', '0.7');                 
+    }, 900);
+</script>
 </html>
