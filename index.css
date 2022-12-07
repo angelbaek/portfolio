@@ -13,7 +13,7 @@
     font-weight: bold;
     background-color: black;
     color: aliceblue;
-    position: relative;
+    position: fixed;
 }
 .top_header .header_label{
     padding-top: 0.5%;
@@ -66,7 +66,7 @@
 }
 
 .chevron_down{
-    margin-top: 15%;
+    margin-top: 18%;
 }
 
 .body_descryption{
@@ -74,3 +74,23 @@
     color: #fafbfc;
     font-size: 24px;
 }
+
+/* portfolio descryption */  
+  .waviy {    
+    position: relative;
+  }
+  .waviy span {
+    opacity: 0.8;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
