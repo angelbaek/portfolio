@@ -12,8 +12,8 @@
 <header>
     <div class="top_header">
         <div class="header_label">
-            <div id="header_label_introduce"><a class="common_header_label" href="/index.html">introduce</a></div>
-            <div id="header_label_project"><a class="common_header_label" href="">project</a></div>
+            <!-- <div id="header_label_introduce"><a class="common_header_label" href="/index.html">introduce</a></div> -->
+            <!-- <div id="header_label_project"><a class="common_header_label" href="">project</a></div> -->
         </div>
         <div class="header_title"><p class="test">Welcome</p></div>        
         <div></div>
@@ -94,6 +94,8 @@
             $('.header_title').append(html);
             $('.first_contents').css('opacity','1');            
             $('.second_contents').css('opacity','0');  
+            $('.first_contents').css('scale','3s');  
+            $('.first_contents').css('forwards','cubic-bezier(0.5, 1, 0.89, 1)');  
         }else{
             $('.first_contents').css('opacity','0');            
         }
@@ -104,6 +106,9 @@
             $('.second_contents').css('opacity','1');  
             $('.header_title').empty();
             $('.header_title').append(html);
+            // animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);  
+            $('.second_contents').css('scale','3s');  
+            $('.second_contents').css('forwards','cubic-bezier(0.5, 1, 0.89, 1)');  
         }else{
             $('.second_contents').css('opacity','0');  
         }
