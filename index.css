@@ -12,6 +12,7 @@
     color: aliceblue;
 }
 .top_header .header_label{
+    padding-top: 0.5%;
     margin-left: 1%;
     display: inline-block;
 }
@@ -19,12 +20,34 @@
 .top_header .header_label #header_label_introduce{
     display: inline-block;
 }
-.top_header .header_label #header_label_project{    
-    /* margin-left: 500px; */
+.top_header .header_label #header_label_project{       
     display: inline-block;
+}
+
+.top_header .header_label #header_label_introduce:hover{
+    cursor: pointer;
+    color: brown;
+}
+
+.top_header .header_label #header_label_project:hover{
+    cursor: pointer;
+    color: brown;
 }
 
 .top_header .header_title{
     display: inline-block;
-    margin-left: 40%;    
+    margin-left: 34%;    
+}
+
+.boddy_contents{
+    font-size: 50px;
+    padding-top: 20%;    
+    text-align: center;
+    height: 1080px;
+    color: white;
+    background-color: rgb(20, 20, 20);
+}
+
+.chevron_down{
+    margin-top: 15%;
 }
