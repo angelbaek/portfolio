@@ -7,6 +7,7 @@
 }
 
 .top_header{
+    z-index: 2;
     width: 100%;
     height: 60px;
     font-size: 24px;
@@ -55,14 +56,16 @@
     display: inline-block;
     /* margin-left: 32.5%;     */
 }
+body{
+  background-color: rgb(20, 20, 20);
+}
 
-.body_contents{    
+.body_contents{      
     font-size: 50px;
     padding-top: 20%;    
     text-align: center;
     height: 1080px;
-    color: white;
-    background-color: rgb(20, 20, 20);
+    color: white;    
 }
 
 .chevron_down{
@@ -82,7 +85,7 @@ h1 {
   max-width: 40ch;
   text-align: center;
   transform: scale(0.94);
-  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);  
 }
 @keyframes scale {
   100% {
@@ -194,3 +197,8 @@ span:nth-child(18) {
       transform: rotateY(360deg) 
     }
   }
+
+.second_contents{
+  margin-top: 25%;
+  height: 2131px;
+}

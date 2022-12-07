@@ -15,47 +15,59 @@
             <div id="header_label_introduce"><a class="common_header_label" href="/index.html">introduce</a></div>
             <div id="header_label_project"><a class="common_header_label" href="">project</a></div>
         </div>
-        <div class="header_title">Baek Seung Ho</div>        
+        <div class="header_title"><p class="test">Welcome</p></div>        
         <div></div>
     </div>
 </header>
+<style>
+    div{
+        transition: all 0.5s;
+    }
+</style>
 <body>
     <div class="body_contents">
-        <div class="main_text">
-            <h1>
-                <span>HELLO</span>
-                <span>AND</span>
-                <span>WELCOME</span>
-              </h1>
-        </div>        
-        <div class="body_descryption">            
-            <div class="waviy">
-                <span style="--i:1">T</span>
-                <span style="--i:2">H</span>
-                <span style="--i:3">I</span>
-                <span style="--i:4">S&nbsp&nbsp</span>                
-                <span style="--i:5">S</span>
-                <span style="--i:6">I</span>
-                <span style="--i:7">T</span>
-                <span style="--i:8">E&nbsp&nbsp</span>
-                <span style="--i:9">I</span>
-                <span style="--i:10">S&nbsp&nbsp</span>
-                <span style="--i:11">M</span>
-                <span style="--i:12">Y&nbsp&nbsp</span>
-                <span style="--i:13">P</span>
-                <span style="--i:14">O</span>
-                <span style="--i:15">R</span>
-                <span style="--i:16">T</span>
-                <span style="--i:17">F</span>
-                <span style="--i:18">O</span>
-                <span style="--i:19">L</span>
-                <span style="--i:20">I</span>
-                <span style="--i:21">O</span>
-               </div>
+        <div class="first_contents">
+            <div class="main_text">
+                <h1>
+                    <span>HELLO</span>
+                    <span>AND</span>
+                    <span>WELCOME</span>
+                  </h1>
+            </div>        
+            <div class="body_descryption">            
+                <div class="waviy">
+                    <span style="--i:1">T</span>
+                    <span style="--i:2">H</span>
+                    <span style="--i:3">I</span>
+                    <span style="--i:4">S&nbsp&nbsp</span>                
+                    <span style="--i:5">S</span>
+                    <span style="--i:6">I</span>
+                    <span style="--i:7">T</span>
+                    <span style="--i:8">E&nbsp&nbsp</span>
+                    <span style="--i:9">I</span>
+                    <span style="--i:10">S&nbsp&nbsp</span>
+                    <span style="--i:11">M</span>
+                    <span style="--i:12">Y&nbsp&nbsp</span>
+                    <span style="--i:13">P</span>
+                    <span style="--i:14">O</span>
+                    <span style="--i:15">R</span>
+                    <span style="--i:16">T</span>
+                    <span style="--i:17">F</span>
+                    <span style="--i:18">O</span>
+                    <span style="--i:19">L</span>
+                    <span style="--i:20">I</span>
+                    <span style="--i:21">O</span>
+                   </div>
+            </div>
+            <div class="chevron_down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
-        <div class="chevron_down">
-            <i class="fas fa-chevron-down"></i>
-        </div>
+        <div class="second_contents">
+            <div class="body_introduce">
+                <h1>asdasd</h1>
+            </div>
+        </div>    
     </div>
 </body>
 <footer>
@@ -72,5 +84,29 @@
         $('.chevron_down').css('opacity', '0.7');                 
         $('.chevron_down').css('scale', '0.8');                        
     }, 900);
+    $(window).scroll(function(){
+        var height = $(window).scrollTop();
+        console.log(height);        
+
+        if(height>=0 && height<200){
+            var html = "Welcome"            
+            $('.header_title').empty();
+            $('.header_title').append(html);
+            $('.first_contents').css('opacity','1');            
+            $('.second_contents').css('opacity','0');  
+        }else{
+            $('.first_contents').css('opacity','0');            
+        }
+
+        if(height>=800 && height<1200){
+            var html = "Introduce"        
+            $('.first_contents').css('opacity','0');            
+            $('.second_contents').css('opacity','1');  
+            $('.header_title').empty();
+            $('.header_title').append(html);
+        }else{
+            $('.second_contents').css('opacity','0');  
+        }
+    });
 </script>
 </html>
