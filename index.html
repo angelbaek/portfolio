@@ -99,7 +99,36 @@
         <div class="second_contents">
             <div class="body_introduce">
                 <h1>
-                    <span>Let me introduce my self</span>
+                    <!-- <span>Let me introduce my self</span> -->
+                    <div class="body_title">
+                        <span id="body_title_span">My Skills</span>
+                    </div>   
+                    <div>
+                        <div class="language_skills">
+                            <div class="skill_tag">LANGUAGE</div>
+                            <img src="/image/language.png" alt="img">
+                        </div>
+                        <div class="language_skills" id="framework_skills">
+                            <div class="skill_tag">FRAMEWORK</div>
+                            <img src="/image/framework.png" alt="img">
+                        </div>
+                        <div class="language_skills" id="framework_skills">
+                            <div class="skill_tag">DBMS</div>
+                            <img src="/image/dbms.png" alt="img">
+                        </div>
+                    </div>                                                         
+                    <div class="language_skills" id="framework_skills">
+                        <div class="skill_tag">COOPERATION</div>
+                        <img src="/image/Cooperation.png" alt="img">
+                    </div>
+                    <div class="language_skills" id="framework_skills">
+                        <div class="skill_tag">TOOLS</div>
+                        <img src="/image/tools.png" alt="img">
+                    </div>
+                    <div class="language_skills" id="framework_skills">
+                        <div class="skill_tag">IDE</div>
+                        <img src="/image/ide.png" alt="img">
+                    </div>
                 </h1>
             </div>
             <div class="chevron_down">
@@ -137,7 +166,7 @@
         console.log(height);        
 
         if(height>=0 && height<200){            
-            $('svg').css('margin-left','-350px');   
+            $('svg').css('margin-left','-400px');   
             const text = document.getElementById('text');
             let string = 'WELCOME';
             text.innerHTML = string;            
@@ -146,8 +175,8 @@
         }else{
             $('.first_contents').css('opacity','0');            
         }
-        if(height>=800 && height<1200){
-            $('svg').css('margin-left','-430px');            
+        if(height>=900 && height<1800){
+            $('svg').css('margin-left','-500px');            
             const text = document.getElementById('text');
             let string2 = 'INTRODUCE';
             text.innerHTML = string2;                           
