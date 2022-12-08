@@ -15,7 +15,40 @@
             <!-- <div id="header_label_introduce"><a class="common_header_label" href="/index.html">introduce</a></div> -->
             <!-- <div id="header_label_project"><a class="common_header_label" href="">project</a></div> -->
         </div>
-        <div class="header_title"><p class="test">Welcome</p></div>        
+        <div class="header_title">
+            <p class="test">
+                <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="1000px" height="240px" xml:space="preserve">
+                <defs class="header_text_contents">
+                    <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
+                    <path fill="#000" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+                    </pattern>                            
+                    <text id="text" transform="translate(2,116)" font-family="Cabin Condensed" font-size="161.047">WELCOME</text>                    
+                    <mask id="text-mask">
+                    <use x="0" y="0" xlink:href="#text" opacity="1" fill="#ffffff"/>
+                    </mask>                    
+                    <g id="eff">
+                    <use x="0" y="0" xlink:href="#text" fill="#a2a3a5"/>                
+                <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" x="-300" y="50" width="1200" height="120" opacity="0.3">
+                    <animate attributeType="xml" attributeName="x" from="-300" to="0" repeatCount="indefinite" dur="2s"/>
+                </rect>
+                <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" y="45" width="1600" height="120" opacity="0.3">
+                    <animate attributeType="xml" attributeName="x" from="-400" to="0" repeatCount="indefinite" dur="3s"/>
+                </rect>
+                    
+                <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" y="55" width="800" height="120" opacity="0.3">
+                    <animate attributeType="xml" attributeName="x" from="-200" to="0" repeatCount="indefinite" dur="1.4s"/>
+                </rect>
+                    <rect class="water-fill" mask="url(#text-mask)" fill="url(#water)" y="55" width="2000" height="120" opacity="0.3">
+                    <animate attributeType="xml" attributeName="x" from="-500" to="0" repeatCount="indefinite" dur="2.8s"/>
+                </rect>
+                    </g>
+                </defs>                
+                    <use xlink:href="#eff" opacity="0.9" style="mix-blend-mode:color-burn"/>
+                </svg>
+            </p>
+        </div>        
         <div></div>
     </div>
 </header>
@@ -65,9 +98,53 @@
         </div>
         <div class="second_contents">
             <div class="body_introduce">
-                <h1>asdasd</h1>
+                <h1>
+                    <!-- <span>Let me introduce my self</span> -->
+                    <div class="body_title">
+                        <span id="body_title_span">My Skills</span>
+                    </div>   
+                    <div>
+                        <div class="language_skills">
+                            <div class="skill_tag">LANGUAGE</div>
+                            <img src="/image/language.png" alt="img">
+                        </div>
+                        <div class="language_skills" id="framework_skills">
+                            <div class="skill_tag">FRAMEWORK</div>
+                            <img src="/image/framework.png" alt="img">
+                        </div>
+                        <div class="language_skills" id="framework_skills">
+                            <div class="skill_tag">DBMS</div>
+                            <img src="/image/dbms.png" alt="img">
+                        </div>
+                    </div>                                                         
+                    <div class="language_skills" id="framework_skills">
+                        <div class="skill_tag">COOPERATION</div>
+                        <img src="/image/Cooperation.png" alt="img">
+                    </div>
+                    <div class="language_skills" id="framework_skills">
+                        <div class="skill_tag">TOOLS</div>
+                        <img src="/image/tools.png" alt="img">
+                    </div>
+                    <div class="language_skills" id="framework_skills">
+                        <div class="skill_tag">IDE</div>
+                        <img src="/image/ide.png" alt="img">
+                    </div>
+                </h1>
+            </div>
+            <div class="chevron_down">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>    
+        <div class="third_contents">
+            <div class="body_project">
+                <div>
+                    <div><a href="https://www.canva.com/design/DAFTgnz6j14/SD5WmL51logz0dGgCGhW5w/view?utm_content=DAFTgnz6j14&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">테스트다</a></div>
+                    <div>기간</div>
+                    <div>프레임워크</div>
+                    <div>pdf 다운</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <footer>
@@ -75,7 +152,7 @@
 
     </div>
 </footer>
-<script>
+<script>    
     setInterval(function() {
         $('.chevron_down').css('opacity', '1.0');                        
         $('.chevron_down').css('scale', '1.0');                        
@@ -88,27 +165,23 @@
         var height = $(window).scrollTop();
         console.log(height);        
 
-        if(height>=0 && height<200){
-            var html = "Welcome"            
-            $('.header_title').empty();
-            $('.header_title').append(html);
+        if(height>=0 && height<200){            
+            $('svg').css('margin-left','-400px');   
+            const text = document.getElementById('text');
+            let string = 'WELCOME';
+            text.innerHTML = string;            
             $('.first_contents').css('opacity','1');            
-            $('.second_contents').css('opacity','0');  
-            $('.first_contents').css('scale','3s');  
-            $('.first_contents').css('forwards','cubic-bezier(0.5, 1, 0.89, 1)');  
+            $('.second_contents').css('opacity','0');                                        
         }else{
             $('.first_contents').css('opacity','0');            
         }
-
-        if(height>=800 && height<1200){
-            var html = "Introduce"        
+        if(height>=900 && height<1800){
+            $('svg').css('margin-left','-500px');            
+            const text = document.getElementById('text');
+            let string2 = 'INTRODUCE';
+            text.innerHTML = string2;                           
             $('.first_contents').css('opacity','0');            
-            $('.second_contents').css('opacity','1');  
-            $('.header_title').empty();
-            $('.header_title').append(html);
-            // animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);  
-            $('.second_contents').css('scale','3s');  
-            $('.second_contents').css('forwards','cubic-bezier(0.5, 1, 0.89, 1)');  
+            $('.second_contents').css('opacity','1');              
         }else{
             $('.second_contents').css('opacity','0');  
         }
