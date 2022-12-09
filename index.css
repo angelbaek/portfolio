@@ -42,7 +42,7 @@
     color: white;
 }
 
-.top_header .header_label #header_label_introduce:hover{
+/* .top_header .header_label #header_label_introduce:hover{
     cursor: pointer;
     opacity: 0.7;
 }
@@ -50,7 +50,7 @@
 .top_header .header_label #header_label_project:hover{    
     cursor: pointer;
     opacity: 0.7;
-}
+} */
 
 .top_header .header_title{
     top: 20%;
@@ -211,7 +211,7 @@ span:nth-child(18) {
   position: relative;
 }
 .waviy span {
-  opacity: 0.8;
+  opacity: 0.9;
   position: relative;
   display: inline-block;
   font-size: 26px;
@@ -301,6 +301,7 @@ svg{
 }
 
 .language_skills:hover{
+  color: rgb(151, 14, 14);
   cursor: pointer;
   transition: 0.3s;
   transform: scale(1.05);
@@ -335,6 +336,7 @@ svg{
 }
 
 .body_project{   
+  box-shadow: 1px 1px 1px 1px #ffffff98;  
   display: block;
   font-size: 24px;
   position: absolute;
@@ -344,6 +346,16 @@ svg{
   height: auto;  
   background-color: #fafbfc;
   border-radius: 10px;
+  transition: 0.3s;
+  transform: scale(1.0);
+}
+.body_project:hover{   
+  transition: 0.3s;
+  transform: scale(1.01);
+}
+.body_project:hover .project_title_contents{
+  color: rgb(151, 14, 14);
+  transition: 0.3s;
 }
 
 .halfbody,
@@ -417,9 +429,9 @@ svg{
 #end_dcy{
   margin-bottom: 20px;
 }
-.testasd{
+.footer_bar{
   font-size: 14.4px;
-  margin-top: 900px;
+  margin-top: 700px;
   position: absolute;
   display: block;
   background-color: rgba(0, 0, 0, 0.74);
@@ -430,7 +442,9 @@ svg{
 }
 .footer_icon_common{
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .footer_icon_github{  
@@ -453,4 +467,29 @@ svg{
   height: 50px;
   width: 50px;
   display: inline-block;
+}
+
+.hamberger_menubar{  
+  width: 50px;
+  /* left: 50%;
+  top: 50%; */
+  transform: translate(50%,25%);
+}
+
+.hamberger_menubar:hover{  
+  cursor: pointer;
+}
+
+.navbar{
+  top: 25%;  
+  height: 50%;
+  z-index: 10;
+  position: fixed;
+  width: 20%;
+  background-color: #fafbfc;
+}
+
+.navbar_menu:hover{
+  color: yellowgreen;
+  cursor: pointer;
 }

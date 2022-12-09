@@ -12,11 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;900&display=swap" rel="stylesheet">    
 </head>
 <header>
-    <div class="top_header">
-        <div class="header_label">
-            <!-- <div id="header_label_introduce"><a class="common_header_label" href="/index.html">introduce</a></div> -->
-            <!-- <div id="header_label_project"><a class="common_header_label" href="">project</a></div> -->
-        </div>
+    <div class="top_header">     
+        <div>
+            <div class="hamberger_menubar">
+                <i class="fa-solid fa-bars"></i>
+            </div>            
+        </div>   
         <div class="header_title">
             <p class="test">
                 <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
@@ -60,6 +61,11 @@
     }
 </style>
 <body>
+    <div class="navbar">
+        <div class="navbar_menu" onclick="home()">Home</div>
+        <div class="navbar_menu" onclick="introduce()">Introduce</div>
+        <div class="navbar_menu" onclick="project()">Project</div>
+    </div>
     <div class="body_contents">
         <div class="first_contents">
             <div class="main_text">
@@ -144,7 +150,7 @@
             <div class="body_project">
                 <div class="project_title_contents">
                     <div>Library site</div>
-                    <div class="day">2022-12-01~(개인 프로젝트)</div>
+                    <div class="day">2022-11-23~(개인 프로젝트)</div>
                 </div>  
                 <div class="image_project">
                     <div class="asdsdaaaasda"></div>
@@ -200,9 +206,9 @@
                     </div>     
                     <div class="project_text">
                         <div class="half_exist">
-                            <div class="common_project_description"><i class="fa-solid fa-check"></i>설명</div>
+                            <div class="common_project_description"><i class="fa-solid fa-check"></i>애플리케이션 요약</div>
                         </div><br>                        
-                        <div class="explan_project">검색엔진을 통하여 도서를 찾고 원하는 도서에 기간을 설정하여 대여하는 사이트</div>
+                        <div class="explan_project">검색엔진을 통하여 도서를 찾고 원하는<br>도서에 기간을 설정하여 대여하는 사이트</div>
                     </div>                    
                     
                 </div>
@@ -210,7 +216,7 @@
             </div>
             
         </div>        
-        <div class="testasd">
+        <div class="footer_bar">
             <div>
                 <div class="footer_icon_common"><a href="https://github.com/angelbaek" target="_blank"><div class="footer_icon_github"></div></a></div>
                 <div class="footer_icon_common"><a href="https://github.com/angelbaek" target="_blank"><div class="footer_icon_notion"></div></a></div>
@@ -222,6 +228,18 @@
     </div>        
 </body>
 <script>    
+    function home(){
+        var height = $(window).scrollTop();
+        window.scrollTo(0,0);
+    };
+    function introduce(){
+        var height = $(window).scrollTop();
+        window.scrollTo(0,1400);
+    };
+    function project(){
+        var height = $(window).scrollTop();
+        window.scrollTo(0,3000);
+    };
     setInterval(function() {
         $('.chevron_down').css('opacity', '1.0');                        
         $('.chevron_down').css('scale', '1.0');                        
@@ -245,7 +263,7 @@
             $('.first_contents').css('opacity','0');            
         }
         if(height>=900 && height<2200){
-            $('svg').css('margin-left','-500px');            
+            $('svg').css('margin-left','-465px');            
             const text = document.getElementById('text');
             let string2 = 'INTRODUCE';
             text.innerHTML = string2;                           
@@ -263,6 +281,13 @@
             $('.third_contents').css('opacity','1');              
         }else{
             $('.third_contents').css('opacity','0');  
+        }
+        if(height>=2800){            
+            $('.top_header').css('opacity','1');
+            $('.top_header').css('background-color','rgba(0, 0, 0, 1)');
+        }else{
+            $('.top_header').css('opacity','0.95');
+            $('.top_header').css('background-color','rgba(0, 0, 0, 0.74)');
         }
     });
 </script>
