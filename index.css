@@ -105,8 +105,13 @@ h1 {
   margin-bottom: 300px;
   margin-top: -50px;
 }  
-
-.body_introduce span{  
+.body_introduce{
+  margin-top: -300px;  
+}
+.third_contents{
+  margin-top: -150px;
+}
+.body_introduce span{    
   display: inline-block;
   opacity: 0;
   filter: blur(4px);  
@@ -328,6 +333,7 @@ svg{
 }
 
 #body_title_span{    
+  visibility: visible;
   font-size: 50px;
   text-shadow: 1px 1px #ffffff4f;
   animation-play-state: running;  
@@ -429,12 +435,12 @@ svg{
   text-align: start;
 }
 
-#end_dcy{
+#end_dcy{  
   margin-bottom: 20px;
 }
 .footer_bar{
   font-size: 14.4px;
-  margin-top: 700px;
+  margin-top: 675px;
   position: absolute;
   display: block;
   background-color: rgba(0, 0, 0, 0.74);
