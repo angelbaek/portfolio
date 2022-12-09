@@ -8,6 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/index.css">
     <script src="https://kit.fontawesome.com/de0d29f011.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;900&display=swap" rel="stylesheet">    
 </head>
 <header>
     <div class="top_header">
@@ -136,22 +138,89 @@
             </div>
         </div>    
         <div class="third_contents">
+            <div class="body_title">
+                <span id="body_title_span">Side Project</span>
+            </div>  
             <div class="body_project">
-                <div>
-                    <div><a href="https://www.canva.com/design/DAFTgnz6j14/SD5WmL51logz0dGgCGhW5w/view?utm_content=DAFTgnz6j14&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">테스트다</a></div>
-                    <div>기간</div>
-                    <div>프레임워크</div>
-                    <div>pdf 다운</div>
+                <div class="project_title_contents">
+                    <div>Library site</div>
+                    <div class="day">2022-12-01~(개인 프로젝트)</div>
+                </div>  
+                <div class="image_project">
+                    <div class="asdsdaaaasda"></div>
                 </div>
+                <div class="halfbody">
+                    <!-- <div class="project_title_contents">
+                        <div>Library site</div>
+                        <div class="day">2022-12-01~(개인 프로젝트)</div>
+                    </div>                                     -->
+                    <div class="project_text">
+                        <div class="half_exist">
+                            <div class="common_project_description"><i class="fa-solid fa-check"></i>주요기능</div>
+                        </div>
+                        <div class="half_exist">
+                            <div class="common_project_description"><p>도서 대여 사이트</p></div>
+                        </div>
+                    </div>                    
+                    <div class="project_text">
+                        <div class="half_exist">
+                            <div class="common_project_description"><i class="fa-solid fa-check"></i>GitHub</div>
+                        </div>
+                        <div class="half_exist">
+                            <div class="common_project_description"><a href="https://github.com/angelbaek/library-project" target="_blank">SourceCode</a></div>
+                        </div>
+                        
+                        
+                    </div>                    
+                    <div class="project_text">
+                        <div class="half_exist">
+                            <div class="common_project_description"><i class="fa-solid fa-check"></i>PPT</div>
+                        </div>
+                        <div class="half_exist">
+                            <div class="common_project_description"><a href="https://www.canva.com/design/DAFTgnz6j14/SD5WmL51logz0dGgCGhW5w/view?utm_content=DAFTgnz6j14&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  target="_blank">
+                                Show
+                            </a></div>
+                        </div>
+                    </div>                    
+                    <div class="project_text">
+                        <div class="half_exist">
+                            <div class="common_project_description"><i class="fa-solid fa-check"></i>PDF</div>
+                        </div>
+                        <div class="half_exist">
+                            <div class="common_project_description "><a href="pdf/Library Site.pdf" download="">Download</a></div>
+                        </div>
+                    </div>     
+                    <div class="project_text" id="end_dcy">
+                        <div class="half_exist">
+                            <div class="common_project_description"><i class="fa-solid fa-check"></i>시연영상</div>
+                        </div>
+                        <div class="half_exist">
+                            <div class="common_project_description"><a href="https://youtu.be/cpt8j4ygmlY" target="_blank">Show</a></div>
+                        </div>
+                    </div>     
+                    <div class="project_text">
+                        <div class="half_exist">
+                            <div class="common_project_description"><i class="fa-solid fa-check"></i>설명</div>
+                        </div><br>                        
+                        <div class="explan_project">검색엔진을 통하여 도서를 찾고 원하는 도서에 기간을 설정하여 대여하는 사이트</div>
+                    </div>                    
+                    
+                </div>
+                
+            </div>
+            
+        </div>        
+        <div class="testasd">
+            <div>
+                <div class="footer_icon_common"><a href="https://github.com/angelbaek" target="_blank"><div class="footer_icon_github"></div></a></div>
+                <div class="footer_icon_common"><a href="https://github.com/angelbaek" target="_blank"><div class="footer_icon_notion"></div></a></div>
+            </div>
+            <div>
+                © 2022. Seung Ho Baek. All rights reserved.
             </div>
         </div>
-    </div>
+    </div>        
 </body>
-<footer>
-    <div class="bottom_footer">
-
-    </div>
-</footer>
 <script>    
     setInterval(function() {
         $('.chevron_down').css('opacity', '1.0');                        
@@ -175,7 +244,7 @@
         }else{
             $('.first_contents').css('opacity','0');            
         }
-        if(height>=900 && height<1800){
+        if(height>=900 && height<2200){
             $('svg').css('margin-left','-500px');            
             const text = document.getElementById('text');
             let string2 = 'INTRODUCE';
@@ -184,6 +253,16 @@
             $('.second_contents').css('opacity','1');              
         }else{
             $('.second_contents').css('opacity','0');  
+        }
+        if(height>=2400 && height<3600){
+            $('svg').css('margin-left','-380px');            
+            const text = document.getElementById('text');
+            let string2 = 'PROJECT';
+            text.innerHTML = string2;                           
+            $('.second_contents').css('opacity','0');            
+            $('.third_contents').css('opacity','1');              
+        }else{
+            $('.third_contents').css('opacity','0');  
         }
     });
 </script>
