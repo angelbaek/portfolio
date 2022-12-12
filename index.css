@@ -435,6 +435,11 @@ svg {
   margin-bottom: 10px;
 }
 
+.footer_icon_common:hover{
+  transform: scale(1.05);
+  opacity: 0.5;
+}
+
 .footer_icon_github {
   margin-top: 20px;
   border-radius: 15px;
