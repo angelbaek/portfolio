@@ -569,7 +569,8 @@ nav ul li:after {
 	transition:all .4s ease-out;
 }
 
-nav ul li:nth-child(1):after { 
+nav ul li:nth-child(1):after {   
+  border-top-right-radius: 15px;
 	content: "Home";
 	line-height: 88px;
 }
@@ -582,6 +583,7 @@ nav ul li:nth-child(3):after {
 	line-height: 85px;
 }
 nav ul li:nth-child(4):after { 
+  border-bottom-right-radius: 15px;
 	content: "Contact";
 	line-height: 70px;
 }
@@ -591,6 +593,7 @@ nav ul li:hover {
 }
 
 nav ul li:hover:after {
+  box-shadow: 1px 1px 1px 1px #fafbfc;
   opacity: 1;
 	transform: perspective(400px) rotateY(0deg) scale(1) ;
 }
