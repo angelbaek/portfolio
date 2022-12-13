@@ -18,12 +18,7 @@
     <link rel="icon" href="/favicon (1).ico" type="image/x-icon">
 </head>
 <header>
-    <div class="top_header">
-        <div>
-            <div class="hamberger_menubar">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
+    <div class="top_header">       
         <div class="header_title">
             <p class="test">
                 <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet'
@@ -80,9 +75,41 @@
 
 <body>
     <div class="navbar">
-        <div class="navbar_menu" onclick="home()">Home</div>
-        <div class="navbar_menu" onclick="introduce()">Introduce</div>
-        <div class="navbar_menu" onclick="project()">Project</div>
+        <nav>
+            <ul>
+                <li onclick=home() class="top_li">
+                    <div class="home-icon">
+                        <div class="roof">
+                            <div class="roof-edge"></div>
+                        </div>
+                        <div class="front"></div>
+                    </div>
+                </li>
+                <li onclick=introduce()>
+                    <div class="about-icon">
+                        <div class="head">
+                            <div class="eyes"></div>
+                            <div class="beard"></div>
+                        </div>
+                    </div>
+                </li>
+                <li onclick=project()>
+                    <div class="work-icon">
+                        <div class="paper"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                        <div class="lines"></div>
+                    </div>
+                </li>
+                <li onclick="window.open('https://chatter-ton-66e.notion.site/Developer-Space-ef5fe3dc43594927bd3f0d2dc01f071e')" class="bottom_li">
+                    <div class="mail-icon">
+                        <div class="mail-base">
+                            <div class="mail-top"></div>                            
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </div>
     <div class="body_contents">
         <div class="first_contents">
@@ -124,7 +151,7 @@
         </div>
         <div class="second_contents">
             <div class="body_introduce">
-                <h1>                    
+                <h1>
                     <div class="body_title">
                         <span id="body_title_span">My Skills</span>
                     </div>
@@ -172,7 +199,7 @@
                 <div class="image_project">
                     <h1><span class="preview">Preview</span></h1>
                 </div>
-                <div class="halfbody">                   
+                <div class="halfbody">
                     <div class="project_text">
                         <div class="half_exist">
                             <div class="common_project_description"><i class="fa-solid fa-check"></i>주요기능</div>
@@ -242,7 +269,9 @@
                 <div class="footer_icon_common"><a href="https://github.com/angelbaek" target="_blank">
                         <div class="footer_icon_github"></div>
                     </a></div>
-                <div class="footer_icon_common"><a href="https://chatter-ton-66e.notion.site/Developer-Space-ef5fe3dc43594927bd3f0d2dc01f071e" target="_blank">
+                <div class="footer_icon_common"><a
+                        href="https://chatter-ton-66e.notion.site/Developer-Space-ef5fe3dc43594927bd3f0d2dc01f071e"
+                        target="_blank">
                         <div class="footer_icon_notion"></div>
                     </a></div>
             </div>
@@ -259,7 +288,7 @@
     };
     function introduce() {
         var height = $(window).scrollTop();
-        window.scrollTo(0, 1400);
+        window.scrollTo(0, 1190);
     };
     function project() {
         var height = $(window).scrollTop();
@@ -310,11 +339,15 @@
         if (height >= 2300) {
             $('.top_header').css('opacity', '1');
             $('.top_header').css('background-color', 'rgba(0, 0, 0, 1)');
-        } else {
+        } else if(height==1190){
+            $('.top_header').css('opacity', '1');
+            $('.top_header').css('background-color', 'rgba(0, 0, 0, 1)');
+        }
+        else {
             $('.top_header').css('opacity', '0.95');
             $('.top_header').css('background-color', 'rgba(0, 0, 0, 0.74)');
         }
-    });
+    });    
 </script>
 
 </html>
